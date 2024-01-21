@@ -1,18 +1,5 @@
-1)City tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN
-sorgusunu yazınız.
+SELECT LENGTH(title),* FROM film WHERE title LIKE '%n' ORDER BY (LENGTH(title)) DESC LIMIT 5
 
-SELECT city.country_id,country,city FROM country
-INNER JOIN city ON country.country_id=city.country_id
-ORDER BY country_id ASC;
+SELECT LENGTH(title),* FROM film WHERE title LIKE '%n' ORDER BY (LENGTH(title)) ASC  OFFSET 5 LIMIT 5
 
-2)Customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini
-birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
-
-SELECT first_name,last_name,payment_id FROM customer
-INNER JOIN payment ON payment.customer_id = customer.customer_id;
-
-3)Customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini
-birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
-
-SELECT first_name,last_name,rental_id FROM customer
-INNER JOIN rental ON rental.customer_id = customer.customer_id;
+SELECT * FROM CUSTOMER WHERE store_id = 1  ORDER BY (last_name) DESC LIMIT 4
